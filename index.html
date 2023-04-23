@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization</title>
+    <!-- <script type="text/javascript" src="bower_components/d3/d3.js"></script> -->
+    <script type="text/javascript" src="public/assets/jquery-3.2.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.9.0/d3-legend.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    
+</head>
+
+<body>
+    <h1 style="background-color:DodgerBlue;">FOOTBALL ANALYSIS</h1>
+
+<div class="tab">
+    <button class="tablinks" id=defaultOpen onclick="openCity(event, 'Player')">Player Data</button>
+    <button class="tablinks" onclick="openCity(event, 'Clubs')">Clubs Data</button>
+</div>
+
+<div id="Player" class="tabcontent">
+  <div id="player_attributes" class="view">
+        <div id="player-select">
+          <button id="player-select-btn" class="button"> Choose another player </button>
+        </div>
+        <span id="player-names">
+        </span>
+      <div id="player-details">
+
+          <svg width="300" height="300" id="image">
+
+          </svg>
+          <svg width="350" height="300" id="details">
+
+          </svg>
+        </div>
+
+    </div>
+    <div id="performance_years" class="view">
+        <select id="select2-search" name="state">
+            <option></option>
+        </select>
+        <select id="attribute-search">
+        </select>
+        <svg  id="lineChart">
+            <g id="xAxis"></g>
+            <g id="yAxis"></g>
+        </svg>
+        <div  id="selected-players">
+        </div>
+    </div>
+
+    <div id="performance_per_years" class="view">
+
+        <!--<svg  id="barChart">-->
+            <!--<g id="xAxisb"></g>-->
+            <!--<g id="yAxisb"></g>-->
+            <!--<g id="barsb"></g>-->
+        <!--</svg>-->
+    </div>
+</div>
+
+<div id="Clubs" class="tabcontent">
+    <div id="club_heatmap" class="view">
+        <div id="league-select">
+            <button id="league-select-btn" class="button">Select League</button>
+        </div>
+        <span id="league-names">
+        </span>
+
+
+
+    </div>
+
+    <div id="color_legend"  class="view">
+        <svg id="legend">
+        </svg>
+    </div>
+
+
+    <div id="league_details"  class="view">
+
+        <svg id="league" >
+                <g class="xAxisLeague"></g>
+                <g class="yAxisLeague"></g>
+        </svg>
+
+
+    </div>
+
+</div>
+
+<script type="application/javascript" src="public/js/yearChart.js"></script>
+<script type="application/javascript" src="public/js/playerAttributes.js"></script>
+
+<script type="application/javascript" src="public/js/Leagues.js"></script>
+
+<script type="application/javascript" src="public/js/script.js"></script>
+
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3-legend/1.1.0/d3-legend.js"></script>
+<script src="public/js/colorbrewer.min.js"></script>
+<script type="application/javascript" src="public/js/script.js"></script>
+</body>
+</html>
